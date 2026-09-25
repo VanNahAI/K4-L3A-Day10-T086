@@ -34,19 +34,20 @@ def _ensure_test_set(df: pd.DataFrame, settings: Settings) -> list[dict[str, Any
         for idx, row in df.head(10).iterrows():
             q_type = types[idx % len(types)]
             title = str(row["title"])
+            core_topic = title.replace("Advanced Perspectives on ", "")
             if q_type == "summary":
                 summary_first = str(row["summary"]).split(".")[0].strip()
                 gt = f"{summary_first}." if summary_first else str(row["summary"])
-                q = f"What is the summary of the paper '{title}'?"
+                q = f"What is the core contribution of the research on {core_topic}?"
             elif q_type == "authors":
                 gt = str(row["authors_joined"])
-                q = f"Who authored the paper '{title}'?"
+                q = f"Who authored the study investigating {core_topic}?"
             elif q_type == "date":
                 gt = str(row["published"])
-                q = f"When was the paper '{title}' published?"
+                q = f"When was the research on {core_topic} published?"
             else:
                 gt = str(row["categories_joined"])
-                q = f"What categories does the paper '{title}' belong to?"
+                q = f"What academic categories classify the work on {core_topic}?"
 
             items.append(
                 {

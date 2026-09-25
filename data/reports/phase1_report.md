@@ -1,7 +1,7 @@
 # Baseline Data Pipeline & RAG Evaluation Report (Phase 1)
 
-- **Date Run:** 2026-09-25T09:16:31.917094+00:00
-- **Model:** `gemini-2.5-flash` (gemini)
+- **Date Run:** 2026-09-25T09:43:48.539890+00:00
+- **Model:** `gemini-3.8-flash` (mock)
 - **Embedding:** `sentence-transformers/all-MiniLM-L6-v2`
 
 ## 1. Data Ingestion & Quality Summary
@@ -15,9 +15,9 @@
 | Metric | Baseline Score | Target Threshold | Status |
 | :--- | :---: | :---: | :---: |
 | **Retrieval Hit Rate** | 100.00% | >= 80.0% | PASS |
-| **Mean Token F1** | 1.0000 | >= 0.60 | PASS |
-| **LLM Judge Accuracy** | 100.00% | >= 70.0% | PASS |
-| **Mean Judge Score (1-5)** | 5.00 / 5.0 | >= 3.5 | PASS |
+| **Mean Token F1** | 0.7852 | >= 0.60 | PASS |
+| **LLM Judge Accuracy** | 80.00% | >= 70.0% | PASS |
+| **Mean Judge Score (1-5)** | 4.00 / 5.0 | >= 3.5 | PASS |
 
 ## 3. Conclusion
 Baseline pipeline executed successfully. Corpus indexed and grounded evaluation complete.

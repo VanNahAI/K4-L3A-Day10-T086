@@ -1,7 +1,7 @@
 # Báo Cáo Đối Chiếu 3 Trạng Thái: Baseline vs Corrupted vs Repaired
 
-- **Thời điểm chạy:** 2026-09-25T09:18:21.827559+00:00
-- **Model:** `gemini-2.5-flash` (gemini)
+- **Thời điểm chạy:** 2026-09-25T09:44:18.967589+00:00
+- **Model:** `gemini-3.8-flash` (mock)
 - **Embedding:** `sentence-transformers/all-MiniLM-L6-v2`
 
 ## 1. Bảng Ma Trận So Sánh Định Lượng 3 Trạng Thái
@@ -11,13 +11,13 @@
 | **Data Quality Gate (GX 1.x)** | PASSED (True) | FAILED (False) | PASSED (True) | Chốt kiểm dịch chặn đứng bản ghi rác & trùng lặp |
 | **Freshness SLA (>180d)** | Tươi mới (True) | Cũ / Quá hạn (False) | Tươi mới (True) | Bắt được 35% bản ghi bị lùi ngày |
 | **Retrieval Hit Rate** | **100.00%** | **60.00%** | **100.00%** | Hit rate sụt giảm mạnh khi tài liệu mới bị drop |
-| **Mean Token F1** | **1.0000** | **0.6741** | **1.0000** | Câu trả lời mất độ khớp từ vựng khi summary rỗng/nhiễu |
-| **Mean Judge Score (1-5)** | **5.00 / 5.0** | **3.60 / 5.0** | **5.00 / 5.0** | Phục hồi hoàn toàn độ chính xác ngữ nghĩa của AI |
+| **Mean Token F1** | **0.7852** | **0.4852** | **0.7852** | Câu trả lời mất độ khớp từ vựng khi summary rỗng/nhiễu |
+| **Mean Judge Score (1-5)** | **4.00 / 5.0** | **2.80 / 5.0** | **4.00 / 5.0** | Phục hồi hoàn toàn độ chính xác ngữ nghĩa của AI |
 
 ## 2. Phân Tích Hiện Tượng Silent Failure
 Khi dữ liệu bị tiêm lỗi:
 - Các trường `summary` bị xóa rỗng hoặc chèn chuỗi ký tự rác không hề gây ra exception runtime.
-- Agent vẫn tự tin trả lời nhưng chất lượng thông tin bị suy thoái nghiêm trọng (Token F1 rớt từ 1.00 xuống 0.67).
+- Agent vẫn tự tin trả lời nhưng chất lượng thông tin bị suy thoái nghiêm trọng (Token F1 rớt từ 0.79 xuống 0.49).
 - Great Expectations 1.x đóng vai trò then chốt: Chặn đứng dữ liệu hỏng ngay từ trạm trung chuyển, ngăn ngừa độc tố dữ liệu xâm nhập vào Vector Database serving layer.
 
 ## 3. Cơ Chế Phục Hồi An Toàn (Idempotent Repair)
