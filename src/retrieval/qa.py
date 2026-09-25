@@ -30,19 +30,8 @@ def _extract_answer(question: str, top_result: SearchResult) -> str:
 
 
 def answer_question(question: str, settings: Settings, index: LocalEmbeddingIndex, top_k: int | None = None) -> AnswerResult:
-    title_match = re.search(r"'([^']+)'", question)
-    exact = index.lookup(title_match.group(1)) if title_match else None
+    # Truy vấn ngữ nghĩa thuần túy (Dense Vector Search) bằng MiniLM embeddings qua ChromaDB
     retrieved = index.search(question, top_k=top_k)
-    if exact:
-        exact_result = SearchResult(
-            paper_id=exact["paper_id"],
-            title=exact["title"],
-            score=1.0,
-            content=exact["content"],
-            metadata=exact["metadata"],
-        )
-        deduped = [exact_result] + [item for item in retrieved if item.paper_id != exact_result.paper_id]
-        retrieved = deduped[: (top_k or settings.top_k)]
     if not retrieved:
         answer = "I don't know from the indexed corpus."
     else:

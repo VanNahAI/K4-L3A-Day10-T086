@@ -138,9 +138,16 @@ class LocalEmbeddingIndex:
             persist_path=Path(payload["persist_path"]),
         )
 
+    def _get_collection(self):
+        try:
+            return self.client.get_collection(name=self.collection_name)
+        except Exception:
+            return self.collection
+
     def search(self, query: str, top_k: int | None = None) -> list[SearchResult]:
         query_embedding = self.embedding_model.embed_query(query)
-        results = self.collection.query(
+        collection = self._get_collection()
+        results = collection.query(
             query_embeddings=[query_embedding],
             n_results=top_k or self.settings.top_k,
             include=["documents", "metadatas", "distances"],
