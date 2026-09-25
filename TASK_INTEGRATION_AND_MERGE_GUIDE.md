@@ -175,7 +175,7 @@ Khi Giảng viên gọi nhóm lên bảng trình diễn:
 ## 📋 6. CHECKLIST NỘP BÀI TRÊN VLEARN LMS TRƯỚC 23:59:59
 
 - [ ] Cả 2 lệnh `python script/run_phase1.py` và `python script/run_corruption_flow.py` chạy exit code 0.
-- [ ] Điền thông tin nhóm và phần tự khai của cả 2 thành viên vào [`docs/TEAM.md`](file:///f:/Personal_project/VinLab1/K4-L3A-Day10-T086/docs/TEAM.md).
+- [ ] Điền thông tin nhóm và phần tự khai của cả 2 thành viên vào [`docs/TEAM.md`](docs/TEAM.md).
 - [ ] Tạo 2 file báo cáo cá nhân:
   - `report/<MSSV1>_<HoTen1>.md` (theo mẫu `report/individual_report.md`)
   - `report/<MSSV2>_<HoTen2>.md` (theo mẫu `report/individual_report.md`)

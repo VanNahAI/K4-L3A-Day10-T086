@@ -11,9 +11,9 @@
 | STT | Họ và tên | MSSV | Email | Vai trò & Phân công công việc | Báo cáo cá nhân |
 |---:|---|---|---|---|---|
 | 1 | [Điền Họ Tên 1] | [Điền MSSV 1] | [Điền Email 1] | **Pipeline Lead & Data Foundation Owner** (`crossref.py`, `cleaning.py`, `corruption.py`, `phase1.py`, `corruption_flow.py`, `script/`) | `report/<MSSV1>_<HoTen1>.md` |
-| 2 | [Điền Họ Tên 2] | [Điền MSSV 2] | [Điền Email 2] | **RAG Specialist & Observability & Evaluation Lead** (`quality.py` GX 1.x, `testset.py`, `index.py`, `reporting.py`, `metrics.py`) | `report/<MSSV2>_<HoTen2>.md` |
+| 2 | Quang | [Điền MSSV 2] | [Điền Email 2] | **RAG Specialist & Observability & Evaluation Lead** (`quality.py` GX 1.x, `testset.py`, `index.py`, `reporting.py`, `metrics.py`) | [`report/Member2_Quang_RAG_Observability.md`](../report/Member2_Quang_RAG_Observability.md) |
 
-*(Chi tiết phân công, đặc tả kỹ thuật và cách chạy song song được quy định tại [TASK_MEMBER_1_PIPELINE_DATA_FOUNDATION.md](file:///f:/Personal_project/VinLab1/K4-L3A-Day10-T086/TASK_MEMBER_1_PIPELINE_DATA_FOUNDATION.md), [TASK_MEMBER_2_RAG_OBSERVABILITY_EVAL.md](file:///f:/Personal_project/VinLab1/K4-L3A-Day10-T086/TASK_MEMBER_2_RAG_OBSERVABILITY_EVAL.md) và [TASK_INTEGRATION_AND_MERGE_GUIDE.md](file:///f:/Personal_project/VinLab1/K4-L3A-Day10-T086/TASK_INTEGRATION_AND_MERGE_GUIDE.md))*
+*(Chi tiết phân công, đặc tả kỹ thuật và cách chạy song song được quy định tại [TASK_MEMBER_1_PIPELINE_DATA_FOUNDATION.md](../TASK_MEMBER_1_PIPELINE_DATA_FOUNDATION.md), [TASK_MEMBER_2_RAG_OBSERVABILITY_EVAL.md](../TASK_MEMBER_2_RAG_OBSERVABILITY_EVAL.md) và [TASK_INTEGRATION_AND_MERGE_GUIDE.md](../TASK_INTEGRATION_AND_MERGE_GUIDE.md))*
 
 ---
 
@@ -29,13 +29,15 @@
 - **Điều học được / Đóng góp chính:**
   - Hiểu sâu sắc về thiết kế Idempotent Pipeline, Data Lineage và bảo toàn bản gốc (Raw Preservation).
 
-### ## [HoVaTen2-MSSV2]
+### ## Quang (Member 2)
 - **Vai trò:** RAG Specialist & Observability & Evaluation Lead.
+- **Báo cáo chi tiết:** [`report/Member2_Quang_RAG_Observability.md`](../report/Member2_Quang_RAG_Observability.md)
 - **Công việc chi tiết đã hoàn thành:**
-  - Thiết lập trạm kiểm soát chất lượng tự động theo chuẩn **Great Expectations 1.x** (Ephemeral context, 4 rules) và Freshness SLA (`src/observability/quality.py`).
-  - Xây dựng bộ câu hỏi Benchmark Test Set 10 câu qua 4 nhóm nghiệp vụ (`src/evaluation/testset.py`).
+  - Thiết lập trạm kiểm soát chất lượng tự động theo chuẩn **Great Expectations 1.x** (Ephemeral context, 4 rules bắt buộc) và Freshness SLA 180 ngày (`src/observability/quality.py`).
+  - Xây dựng bộ câu hỏi Benchmark Test Set 10 câu qua 4 nhóm nghiệp vụ (`src/evaluation/testset.py`) sinh ra `data/eval/test_set.json`.
   - Quản lý 3 collection ChromaDB (`papers-baseline`, `papers-corrupted`, `papers-repaired`) và mô hình embedding MiniLM (`src/retrieval/`).
-  - Thiết kế generator xuất báo cáo Phase 1 và Bảng ma trận đối chiếu 3 trạng thái (`src/observability/reporting.py`).
+  - Thiết kế generator xuất báo cáo Phase 1 (`phase1_report.md`) và Bảng ma trận đối chiếu 3 trạng thái (`corruption_report.md`) trong `src/observability/reporting.py`.
+  - Sửa lỗi encoding console Windows (`cp1252`) trong pipeline và loại bỏ 100% đường dẫn tuyệt đối local trong tài liệu.
 - **Điều học được / Đóng góp chính:**
-  - Cách thiết lập hệ thống cảnh báo sớm chặn đứng hiện tượng Silent Failure trước khi dữ liệu vào Vector Store.
+  - Hiểu sâu sắc về cơ chế kiểm soát chất lượng dữ liệu để chặn đứng hiện tượng Silent Failure & Hallucination trong các hệ thống RAG Production.
 

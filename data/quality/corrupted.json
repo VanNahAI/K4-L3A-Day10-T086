@@ -1,0 +1,25 @@
+{
+  "report_name": "corrupted",
+  "success": false,
+  "total_expectations": 6,
+  "successful_expectations": 4,
+  "failed_expectations": [
+    {
+      "expectation_type": "expect_column_values_to_be_unique",
+      "kwargs": {
+        "batch_id": "papers_source_corrupted-papers_asset_corrupted",
+        "column": "paper_id"
+      },
+      "success": false
+    },
+    {
+      "expectation_type": "expect_column_value_lengths_to_be_between",
+      "kwargs": {
+        "batch_id": "papers_source_corrupted-papers_asset_corrupted",
+        "column": "summary",
+        "min_value": 30
+      },
+      "success": false
+    }
+  ]
+}

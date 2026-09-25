@@ -5,7 +5,7 @@
 > **MSSV:** `[Điền MSSV]`  
 > **Vai trò hợp nhất:** **Pipeline Lead** (Trưởng nhóm Điều phối Pipeline) + **Data Foundation Owner** (Chủ quản Hạ tầng & Phục hồi Dữ liệu)  
 > **Nhánh Git phụ trách:** `feature/pipeline-foundation`  
-> **Tài liệu phối hợp:** Đối chiếu với [`TASK_MEMBER_2_RAG_OBSERVABILITY_EVAL.md`](file:///f:/Personal_project/VinLab1/K4-L3A-Day10-T086/TASK_MEMBER_2_RAG_OBSERVABILITY_EVAL.md) và [`TASK_INTEGRATION_AND_MERGE_GUIDE.md`](file:///f:/Personal_project/VinLab1/K4-L3A-Day10-T086/TASK_INTEGRATION_AND_MERGE_GUIDE.md).
+> **Tài liệu phối hợp:** Đối chiếu với [`TASK_MEMBER_2_RAG_OBSERVABILITY_EVAL.md`](TASK_MEMBER_2_RAG_OBSERVABILITY_EVAL.md) và [`TASK_INTEGRATION_AND_MERGE_GUIDE.md`](TASK_INTEGRATION_AND_MERGE_GUIDE.md).
 
 ---
 
@@ -14,12 +14,12 @@
 Là **Pipeline Lead & Data Foundation Owner**, bạn chịu trách nhiệm xây dựng "hạ tầng cung cấp nước sạch" cho hệ thống AI và bộ khung điều phối toàn bài lab. Bạn phụ trách từ khâu thu thập metadata từ bên ngoài, bảo toàn dữ liệu gốc, làm sạch chuẩn hóa, tiêm độc tố dữ liệu giả lập, thực thi cơ chế tự phục hồi an toàn (Idempotent Repair) và điều phối toàn bộ pipeline đầu-cuối.
 
 ### Danh mục File & Module sở hữu trực tiếp:
-1. [`src/ingestion/crossref.py`](file:///f:/Personal_project/VinLab1/K4-L3A-Day10-T086/src/ingestion/crossref.py): Thu thập Crossref REST API, bảo toàn bản gốc (Raw Preservation), cơ chế cứu hộ Offline Fallback, phân rã `PaperRecord`.
-2. [`src/ingestion/cleaning.py`](file:///f:/Personal_project/VinLab1/K4-L3A-Day10-T086/src/ingestion/cleaning.py): Tiền xử lý, bóc tách thẻ XML/HTML, tính tuổi dữ liệu `age_days`, ghép `text_for_embedding`, khử trùng lặp `paper_id`.
-3. [`src/ingestion/corruption.py`](file:///f:/Personal_project/VinLab1/K4-L3A-Day10-T086/src/ingestion/corruption.py): Triển khai Synthetic Data Corruption Suite với 6 kịch bản làm bẩn dữ liệu thực tế và lưu `corruption_log.json`.
-4. [`src/pipelines/phase1.py`](file:///f:/Personal_project/VinLab1/K4-L3A-Day10-T086/src/pipelines/phase1.py): Điều phối luồng Baseline Pipeline End-to-End.
-5. [`src/pipelines/corruption_flow.py`](file:///f:/Personal_project/VinLab1/K4-L3A-Day10-T086/src/pipelines/corruption_flow.py): Điều phối luồng Thử thách Tiêm lỗi -> Đo lường suy giảm -> Phục hồi dữ liệu (Idempotent Repair) -> Báo cáo đối chiếu.
-6. [`script/run_phase1.py`](file:///f:/Personal_project/VinLab1/K4-L3A-Day10-T086/script/run_phase1.py) & [`script/run_corruption_flow.py`](file:///f:/Personal_project/VinLab1/K4-L3A-Day10-T086/script/run_corruption_flow.py): 2 Entrypoint chính chạy thực thi.
+1. [`src/ingestion/crossref.py`](src/ingestion/crossref.py): Thu thập Crossref REST API, bảo toàn bản gốc (Raw Preservation), cơ chế cứu hộ Offline Fallback, phân rã `PaperRecord`.
+2. [`src/ingestion/cleaning.py`](src/ingestion/cleaning.py): Tiền xử lý, bóc tách thẻ XML/HTML, tính tuổi dữ liệu `age_days`, ghép `text_for_embedding`, khử trùng lặp `paper_id`.
+3. [`src/ingestion/corruption.py`](src/ingestion/corruption.py): Triển khai Synthetic Data Corruption Suite với 6 kịch bản làm bẩn dữ liệu thực tế và lưu `corruption_log.json`.
+4. [`src/pipelines/phase1.py`](src/pipelines/phase1.py): Điều phối luồng Baseline Pipeline End-to-End.
+5. [`src/pipelines/corruption_flow.py`](src/pipelines/corruption_flow.py): Điều phối luồng Thử thách Tiêm lỗi -> Đo lường suy giảm -> Phục hồi dữ liệu (Idempotent Repair) -> Báo cáo đối chiếu.
+6. [`script/run_phase1.py`](script/run_phase1.py) & [`script/run_corruption_flow.py`](script/run_corruption_flow.py): 2 Entrypoint chính chạy thực thi.
 
 ---
 

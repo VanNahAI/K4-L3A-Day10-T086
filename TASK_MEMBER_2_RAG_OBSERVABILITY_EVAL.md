@@ -5,7 +5,7 @@
 > **MSSV:** `[Điền MSSV]`  
 > **Vai trò hợp nhất:** **RAG Specialist** (Chuyên gia Vector Store & Agent Retrieval) + **Observability & Evaluation Lead** (Trưởng nhóm Giám sát Chất lượng & Đánh giá)  
 > **Nhánh Git phụ trách:** `feature/rag-observability`  
-> **Tài liệu phối hợp:** Đối chiếu với [`TASK_MEMBER_1_PIPELINE_DATA_FOUNDATION.md`](file:///f:/Personal_project/VinLab1/K4-L3A-Day10-T086/TASK_MEMBER_1_PIPELINE_DATA_FOUNDATION.md) và [`TASK_INTEGRATION_AND_MERGE_GUIDE.md`](file:///f:/Personal_project/VinLab1/K4-L3A-Day10-T086/TASK_INTEGRATION_AND_MERGE_GUIDE.md).
+> **Tài liệu phối hợp:** Đối chiếu với [`TASK_MEMBER_1_PIPELINE_DATA_FOUNDATION.md`](TASK_MEMBER_1_PIPELINE_DATA_FOUNDATION.md) và [`TASK_INTEGRATION_AND_MERGE_GUIDE.md`](TASK_INTEGRATION_AND_MERGE_GUIDE.md).
 
 ---
 
@@ -19,12 +19,12 @@ Là **RAG Specialist & Observability & Evaluation Lead**, bạn đóng vai trò 
 5. Xuất bản các báo cáo phân tích chuyên sâu định dạng Markdown (`phase1_report.md` và `corruption_report.md`) chứng minh hiện tượng **Silent Failure** và khả năng tự phục hồi của AI.
 
 ### Danh mục File & Module sở hữu trực tiếp:
-1. [`src/observability/quality.py`](file:///f:/Personal_project/VinLab1/K4-L3A-Day10-T086/src/observability/quality.py): Cấu hình Great Expectations 1.x (chuẩn Ephemeral mới nhất), 4 Expectations bắt buộc, đo lường Freshness SLA.
-2. [`src/observability/reporting.py`](file:///f:/Personal_project/VinLab1/K4-L3A-Day10-T086/src/observability/reporting.py): Xây dựng generator sinh báo cáo Markdown `phase1_report.md` và bảng ma trận đối chiếu 3 trạng thái `corruption_report.md`.
-3. [`src/evaluation/testset.py`](file:///f:/Personal_project/VinLab1/K4-L3A-Day10-T086/src/evaluation/testset.py): Xây dựng bộ đề thi 10 câu hỏi trắc nghiệm/tự luận đa dạng (summary, authors, date, categories) kèm ground truth.
-4. [`src/retrieval/index.py`](file:///f:/Personal_project/VinLab1/K4-L3A-Day10-T086/src/retrieval/index.py) & [`src/retrieval/embeddings.py`](file:///f:/Personal_project/VinLab1/K4-L3A-Day10-T086/src/retrieval/embeddings.py): Quản lý 3 Chroma collections tách biệt (`papers-baseline`, `papers-corrupted`, `papers-repaired`), MiniLM embedding, cosine similarity.
-5. [`src/retrieval/agent.py`](file:///f:/Personal_project/VinLab1/K4-L3A-Day10-T086/src/retrieval/agent.py), [`src/retrieval/llm.py`](file:///f:/Personal_project/VinLab1/K4-L3A-Day10-T086/src/retrieval/llm.py), [`src/retrieval/qa.py`](file:///f:/Personal_project/VinLab1/K4-L3A-Day10-T086/src/retrieval/qa.py): Điều phối QA Agent đa nhà cung cấp LLM (Gemini / OpenAI / Anthropic / Mock).
-6. [`src/evaluation/metrics.py`](file:///f:/Personal_project/VinLab1/K4-L3A-Day10-T086/src/evaluation/metrics.py): Đảm bảo các chỉ số đo lường Retrieval Hit Rate, Token F1, LLM Judge hoạt động chuẩn xác.
+1. [`src/observability/quality.py`](src/observability/quality.py): Cấu hình Great Expectations 1.x (chuẩn Ephemeral mới nhất), 4 Expectations bắt buộc, đo lường Freshness SLA.
+2. [`src/observability/reporting.py`](src/observability/reporting.py): Xây dựng generator sinh báo cáo Markdown `phase1_report.md` và bảng ma trận đối chiếu 3 trạng thái `corruption_report.md`.
+3. [`src/evaluation/testset.py`](src/evaluation/testset.py): Xây dựng bộ đề thi 10 câu hỏi trắc nghiệm/tự luận đa dạng (summary, authors, date, categories) kèm ground truth.
+4. [`src/retrieval/index.py`](src/retrieval/index.py) & [`src/retrieval/embeddings.py`](src/retrieval/embeddings.py): Quản lý 3 Chroma collections tách biệt (`papers-baseline`, `papers-corrupted`, `papers-repaired`), MiniLM embedding, cosine similarity.
+5. [`src/retrieval/agent.py`](src/retrieval/agent.py), [`src/retrieval/llm.py`](src/retrieval/llm.py), [`src/retrieval/qa.py`](src/retrieval/qa.py): Điều phối QA Agent đa nhà cung cấp LLM (Gemini / OpenAI / Anthropic / Mock).
+6. [`src/evaluation/metrics.py`](src/evaluation/metrics.py): Đảm bảo các chỉ số đo lường Retrieval Hit Rate, Token F1, LLM Judge hoạt động chuẩn xác.
 
 ---
 
