@@ -11,7 +11,7 @@
 | STT | Họ và tên | MSSV | Email | Vai trò & Phân công công việc | Báo cáo cá nhân |
 |---:|---|---|---|---|---|
 | 1 | [Điền Họ Tên 1] | [Điền MSSV 1] | [Điền Email 1] | **Pipeline Lead & Data Foundation Owner** (`crossref.py`, `cleaning.py`, `corruption.py`, `phase1.py`, `corruption_flow.py`, `script/`) | `report/<MSSV1>_<HoTen1>.md` |
-| 2 | Quang | [Điền MSSV 2] | [Điền Email 2] | **RAG Specialist & Observability & Evaluation Lead** (`quality.py` GX 1.x, `testset.py`, `index.py`, `reporting.py`, `metrics.py`) | [`report/Member2_Quang_RAG_Observability.md`](../report/Member2_Quang_RAG_Observability.md) |
+| 2 | Nguyễn Khắc Quang | 2A202602885 | quang180204@gmail.com | **RAG Specialist & Observability & Evaluation Lead** (`quality.py` GX 1.x, `testset.py`, `index.py`, `reporting.py`, `metrics.py`) | [`report/2A202602885_NguyenKhacQuang.md`](../report/2A202602885_NguyenKhacQuang.md) |
 
 *(Chi tiết phân công, đặc tả kỹ thuật và cách chạy song song được quy định tại [TASK_MEMBER_1_PIPELINE_DATA_FOUNDATION.md](../TASK_MEMBER_1_PIPELINE_DATA_FOUNDATION.md), [TASK_MEMBER_2_RAG_OBSERVABILITY_EVAL.md](../TASK_MEMBER_2_RAG_OBSERVABILITY_EVAL.md) và [TASK_INTEGRATION_AND_MERGE_GUIDE.md](../TASK_INTEGRATION_AND_MERGE_GUIDE.md))*
 
@@ -29,9 +29,11 @@
 - **Điều học được / Đóng góp chính:**
   - Hiểu sâu sắc về thiết kế Idempotent Pipeline, Data Lineage và bảo toàn bản gốc (Raw Preservation).
 
-### ## Quang (Member 2)
+### ## NguyenKhacQuang-2A202602885
+- **Họ và tên:** Nguyễn Khắc Quang
+- **MSSV:** 2A202602885
 - **Vai trò:** RAG Specialist & Observability & Evaluation Lead.
-- **Báo cáo chi tiết:** [`report/Member2_Quang_RAG_Observability.md`](../report/Member2_Quang_RAG_Observability.md)
+- **Báo cáo chi tiết:** [`report/2A202602885_NguyenKhacQuang.md`](../report/2A202602885_NguyenKhacQuang.md)
 - **Công việc chi tiết đã hoàn thành:**
   - Thiết lập trạm kiểm soát chất lượng tự động theo chuẩn **Great Expectations 1.x** (Ephemeral context, 4 rules bắt buộc) và Freshness SLA 180 ngày (`src/observability/quality.py`).
   - Xây dựng bộ câu hỏi Benchmark Test Set 10 câu qua 4 nhóm nghiệp vụ (`src/evaluation/testset.py`) sinh ra `data/eval/test_set.json`.

@@ -1,8 +1,8 @@
 # 📋 BẢN PHÂN CÔNG NHIỆM VỤ THỰC THI — THÀNH VIÊN 2
 ## VAI TRÒ: RAG SPECIALIST & OBSERVABILITY & EVALUATION LEAD
 
-> **Họ và tên:** `[Điền Họ và Tên Thành viên 2]`  
-> **MSSV:** `[Điền MSSV]`  
+> **Họ và tên:** **Nguyễn Khắc Quang**  
+> **MSSV:** **2A202602885**  
 > **Vai trò hợp nhất:** **RAG Specialist** (Chuyên gia Vector Store & Agent Retrieval) + **Observability & Evaluation Lead** (Trưởng nhóm Giám sát Chất lượng & Đánh giá)  
 > **Nhánh Git phụ trách:** `feature/rag-observability`  
 > **Tài liệu phối hợp:** Đối chiếu với [`TASK_MEMBER_1_PIPELINE_DATA_FOUNDATION.md`](TASK_MEMBER_1_PIPELINE_DATA_FOUNDATION.md) và [`TASK_INTEGRATION_AND_MERGE_GUIDE.md`](TASK_INTEGRATION_AND_MERGE_GUIDE.md).
@@ -232,9 +232,9 @@ gantt
 
 ## ✅ 5. CHECKLIST NGHIỆM THU CỦA THÀNH VIÊN 2 TRƯỚC KHI MERGE
 
-- [ ] File `src/observability/quality.py` chạy đúng chuẩn GX 1.x (không dùng cú pháp cũ gây lỗi), kiểm tra đủ 4 Expectations và Freshness SLA.
-- [ ] File `src/evaluation/testset.py` sinh đúng 10 câu hỏi bao phủ 4 categories: `summary`, `authors`, `date`, `categories`.
-- [ ] File `src/observability/reporting.py` sinh ra `phase1_report.md` và `corruption_report.md` có đầy đủ bảng ma trận 3 cột rõ ràng.
-- [ ] Các ChromaDB collections nạp vector chuẩn xác và trả về kết quả tìm kiếm đúng độ tương đồng cosine.
-- [ ] Viết phần tự khai cá nhân của Thành viên 2 vào `report/<MSSV2>_HoTen.md` và `docs/TEAM.md`.
-- [ ] Commit toàn bộ code với commit message rõ ràng: `feat(observability-rag): implement GX 1.x quality gate, freshness SLA, benchmark testset, and comparative reporting`.
+- [x] File `src/observability/quality.py` chạy đúng chuẩn GX 1.x (không dùng cú pháp cũ gây lỗi), kiểm tra đủ 4 Expectations và Freshness SLA.
+- [x] File `src/evaluation/testset.py` sinh đúng 10 câu hỏi bao phủ 4 categories: `summary`, `authors`, `date`, `categories`.
+- [x] File `src/observability/reporting.py` sinh ra `phase1_report.md` và `corruption_report.md` có đầy đủ bảng ma trận 3 cột rõ ràng.
+- [x] Các ChromaDB collections nạp vector chuẩn xác và trả về kết quả tìm kiếm đúng độ tương đồng cosine.
+- [x] Viết phần tự khai cá nhân của Thành viên 2 vào `report/2A202602885_NguyenKhacQuang.md` và `docs/TEAM.md`.
+- [x] Commit toàn bộ code với commit message rõ ràng: `feat(observability-rag): implement GX 1.x quality gate, freshness SLA, benchmark testset, and comparative reporting`.

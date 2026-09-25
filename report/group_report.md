@@ -17,7 +17,7 @@
 | STT | Họ và tên | MSSV | Vai trò chính | Module / Deliverable sở hữu |
 | --: | :--- | :--- | :--- | :--- |
 | 1 | [Điền Họ Tên 1] | [Điền MSSV 1] | **Pipeline Lead & Data Foundation Owner** | Ingestion (`crossref.py`), Cleaning (`cleaning.py`), Corruption (`corruption.py`), Pipeline Orchestration (`phase1.py`, `corruption_flow.py`) |
-| 2 | Quang | [Điền MSSV 2] | **RAG Specialist & Observability & Evaluation Lead** | Data Quality Gate GX 1.x & Freshness SLA (`quality.py`), Benchmark Test Set (`testset.py`), Vector Store (`index.py`), Reporting (`reporting.py`) |
+| 2 | Nguyễn Khắc Quang | 2A202602885 | **RAG Specialist & Observability & Evaluation Lead** | Data Quality Gate GX 1.x & Freshness SLA (`quality.py`), Benchmark Test Set (`testset.py`), Vector Store (`index.py`), Reporting (`reporting.py`) |
 
 ---
 
