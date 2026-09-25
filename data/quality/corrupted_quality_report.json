@@ -1,0 +1,16 @@
+{
+  "report_name": "corrupted",
+  "success": false,
+  "total_expectations": 4,
+  "successful_expectations": 2,
+  "failed_expectations": [
+    {
+      "expectation": "ExpectColumnValuesToBeUnique",
+      "column": "paper_id"
+    },
+    {
+      "expectation": "ExpectColumnValueLengthsToBeBetween",
+      "column": "summary"
+    }
+  ]
+}

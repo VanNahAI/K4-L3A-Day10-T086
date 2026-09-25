@@ -1,0 +1,69 @@
+{
+  "timestamp": "2026-09-25T16:18:04.782156",
+  "total_original_records": 24,
+  "total_corrupted_records": 22,
+  "corruptions_count": 6,
+  "corruptions": [
+    {
+      "corruption_type": "drop_latest_records",
+      "description": "Dropped 4 newest records (~20%)",
+      "count": 4,
+      "affected_paper_ids": [
+        "10.1145/3637528.3671812",
+        "10.1145/3637528.3671808",
+        "10.1145/3637528.3671804",
+        "10.1145/3637528.3671807"
+      ]
+    },
+    {
+      "corruption_type": "blank_summary",
+      "description": "Set summary to empty string for 2 records",
+      "count": 2,
+      "affected_paper_ids": [
+        "10.1145/3637528.3671802",
+        "10.1145/3637528.3671824"
+      ]
+    },
+    {
+      "corruption_type": "inject_noise",
+      "description": "Injected random noise string into summary for 2 records",
+      "count": 2,
+      "affected_paper_ids": [
+        "10.1145/3637528.3671823",
+        "10.1145/3637528.3671822"
+      ]
+    },
+    {
+      "corruption_type": "truncate_title",
+      "description": "Truncated title length to < 8 chars for 2 records",
+      "count": 2,
+      "affected_paper_ids": [
+        "10.1145/3637528.3671821",
+        "10.1145/3637528.3671810"
+      ]
+    },
+    {
+      "corruption_type": "stale_date",
+      "description": "Pushed published date back 365 days for 7 records to trigger Freshness SLA violation",
+      "count": 7,
+      "affected_paper_ids": [
+        "10.1145/3637528.3671820",
+        "10.1145/3637528.3671819",
+        "10.1145/3637528.3671818",
+        "10.1145/3637528.3671817",
+        "10.1145/3637528.3671816",
+        "10.1145/3637528.3671815",
+        "10.1145/3637528.3671814"
+      ]
+    },
+    {
+      "corruption_type": "duplicate_rows",
+      "description": "Duplicated 2 records to trigger GX paper_id uniqueness violation",
+      "count": 2,
+      "affected_paper_ids": [
+        "10.1145/3637528.3671802",
+        "10.1145/3637528.3671824"
+      ]
+    }
+  ]
+}
